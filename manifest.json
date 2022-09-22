@@ -1,0 +1,45 @@
+{
+  "name": "trustvox",
+  "vendor": "{account}",
+  "version": "0.0.1",
+  "title": "RA Trustvox",
+  "description": "Integrates with RA Trustvox",
+  "builders": {
+    "react": "3.x",
+    "styles": "2.x",
+    "messages": "1.x",
+    "store": "0.x",
+    "pixel": "0.x",
+    "docs": "0.x"
+  },
+  "dependencies": {
+    "vtex.product-review-interfaces": "1.x",
+    "vtex.product-summary": "2.x",
+    "vtex.product-context": "0.x",
+    "vtex.pixel-interfaces": "1.x"
+  },
+  "settingsSchema": {
+    "title": "RA Trustvox",
+    "type": "object",
+    "properties": {
+      "storeId": {
+        "type": "string",
+        "access": "public",
+        "title": "Store ID"
+      },
+      "colt": {
+        "type": "number",
+        "access": "public",
+        "title": "Quantity of reviews on colt",
+        "default": 7
+      },
+      "staging": {
+        "type": "boolean",
+        "access": "public",
+        "title": "Use staging scripts",
+        "default": "true"
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

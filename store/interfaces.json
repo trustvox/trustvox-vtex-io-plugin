@@ -1,0 +1,20 @@
+{
+  "pixel.ratrustvox": {
+    "component": "index"
+  },
+  "product-reviews.ratrustvox": {
+    "component": "Reviews"
+  },
+  "product-rating-summary.ratrustvox": {
+    "component": "RatingSummary"
+  },
+  "product-rating-inline.ratrustvox": {
+    "component": "RatingInline"
+  },
+  "certificate-ratrustvox": {
+    "component": "Certificate"
+  },
+  "colt-ratrustvox": {
+    "component": "Colt"
+  }
+}

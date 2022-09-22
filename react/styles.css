@@ -1,0 +1,22 @@
+.trustvoxContainer {
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.subtitleTrustvoxReview,
+.trustvoxReviews {
+  text-align: center;
+}
+
+.coltTrustvoxContainer {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.certificateTrustvoxContainer {}
+
+.ratingInlineTrustvox {}
