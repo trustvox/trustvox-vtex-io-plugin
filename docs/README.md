@@ -80,6 +80,7 @@ Obs: If you are a VTEX partner, this process will take 30minutes approximately. 
 | `product-rating-inline` | This block can be added in product shelves. It renders the widget that lists the average rating stars and amount of reviews for the product being viewed. | ![product-rating-inline block](/docs/assets/product-rating-inline.png) |
 | `product-rating-summary` | This block can be added to the product page (`store.product`). It renders the widget that lists the average rating stars and amount of reviews for the product being viewed. | ![product-rating-inline block](/docs/assets/product-rating-summary.png) |
 | `product-reviews` | This block can be added to the product page (`store.product`) and renders the main widget which lists any reviews or answered questions for the product being viewed as well as a form to ask a new question, ff the product did not have the question or review, it will be displayed as seen from the store. | ![product-rating-inline block](/docs/assets/product-reviews.png) |
+| `colt-ratrustvox` | This block can be added to the main page or another page you prefer, rendering the carousel of opinions widget. It lists central reviews of the Store. | ![colt-ratrustvox block](/docs/assets/colt.png) |
 
 This app also adds two new blocks:
 
