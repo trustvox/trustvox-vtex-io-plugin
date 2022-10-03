@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import { ProductSummaryContext } from 'vtex.product-summary'
-import { injectTrustVoxScripts } from "./services/ScriptHandler";
+import { injectWidgetScripts } from "./services/ScriptHandler";
 
 const RatingInline = () => {
   const { product } = useContext(ProductSummaryContext)
@@ -10,7 +10,7 @@ const RatingInline = () => {
   }
 
   useEffect(() => {
-    injectTrustVoxScripts();
+    injectWidgetScripts();
   }, [])
 
   return (

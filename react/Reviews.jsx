@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import { ProductContext } from 'vtex.product-context'
-import { injectTrustVoxScripts, setProduct } from "./services/ScriptHandler";
+import { injectWidgetScripts, setProduct } from "./services/ScriptHandler";
 
 import styles from './styles.css'
 
@@ -25,7 +25,7 @@ const Reviews = () => {
       department_id: null
     });
 
-    injectTrustVoxScripts();
+    injectWidgetScripts();
   }, [product.productId]);
 
   return (
