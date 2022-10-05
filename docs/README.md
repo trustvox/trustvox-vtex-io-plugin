@@ -29,10 +29,10 @@ Example: `https://{account}.myvtex.com`
   }
 ```
 
-4. Do you need to request to VTEX team approval you to publish this app. So access this [link](https://forms.gle/f7bYdTA7tfdfB5tt7) and fill the fields accordingly with your account.
+4. Do you need to request to VTEX team approval you to publish this app. So access [this link](https://forms.gle/f7bYdTA7tfdfB5tt7) and fill the fields accordingly with your account.
 
-``` 
-Obs: If you are a VTEX partner, this process will take 30minutes approximately. If not, can take 3 days to the vtex appoval your request
+```
+Obs: If you are a VTEX partner, this process will take 30 minutes approximately. If not, can take 3 days to the vtex appoval your request
 ```
 
 * The app name is: `trustvox`
@@ -86,6 +86,7 @@ This app also adds two new blocks:
 | Block | Description | Preview |
 | - | - | - |
 | `certificate-ratrustvox` | This block renders the *Reviews Verdadeiros* certificate widget, you can se more on [this page](https://help.trustvox.com.br/pt-BR/articles/5551970-como-adicionar-e-exibir-o-selo-de-reviews-verdadeiros-no-seu-site). | ![certificate-ratrustvox block](/docs/assets/certificate-ratrustvox.png) |
+| `colt-ratrustvox` | This block renders the *Carrossel de opiniões* widget, you can se more on [this page](https://help.trustvox.com.br/pt-BR/articles/5557670-como-adicionar-as-opinioes-de-loja-carrossel-da-ra-trustvox-em-seu-site). | ![colt-ratrustvox block](/docs/assets/colt-ratrustvox.png) |
 
 ### Styles API
 

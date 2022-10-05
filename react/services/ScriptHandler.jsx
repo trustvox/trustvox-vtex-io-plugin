@@ -51,7 +51,7 @@ export const injectTrustVoxScripts = () => {
   // All scripts
   const scriptTags = [
     window.appsetting_trustvox_staging ? "https://storage.googleapis.com/trustvox-certificate-widget-staging/widget.js" : "https://certificate.trustvox.com.br/widget.js",
-    //window.appsetting_trustvox_staging ? "https://storage.googleapis.com/trustvox-colt-staging/colt.min.js" : "https://colt.trustvox.com.br/colt.min.js",
+    window.appsetting_trustvox_staging ? "https://storage.googleapis.com/trustvox-colt-staging/colt.min.js" : "https://colt.trustvox.com.br/colt.min.js",
     window.appsetting_trustvox_staging ? "https://static.trustvox.com.br/trustvox-sincero-staging/sincero.js" : "https://static.trustvox.com.br/sincero/sincero.js",
     window.appsetting_trustvox_staging ? "https://storage.googleapis.com/trustvox-rate-staging/widget.js" : "https://rate.trustvox.com.br/widget.js"
   ];
