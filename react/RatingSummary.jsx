@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import { ProductContext } from 'vtex.product-context'
 import { FormattedMessage } from 'react-intl'
-import { injectTrustVoxScripts, setProduct } from "./services/ScriptHandler";
+import { injectWidgetScripts, setProduct } from "./services/ScriptHandler";
 
 const RatingSummary = () => {
   const { product } = useContext(ProductContext)
@@ -24,7 +24,7 @@ const RatingSummary = () => {
       department_id: null
     })
 
-    injectTrustVoxScripts();
+    injectWidgetScripts();
   }, [product.productId]);
 
   return (

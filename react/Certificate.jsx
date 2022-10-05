@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
-import { injectTrustVoxScripts } from "./services/ScriptHandler";
+import { injectCertificateScript } from "./services/ScriptHandler";
 
 import styles from './styles.css';
 
 const Certificate = () => {
   useEffect(() => {
-    injectTrustVoxScripts();
+    injectCertificateScript();
   }, [])
 
   return (

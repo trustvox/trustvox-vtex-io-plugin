@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
-import { injectTrustVoxScripts } from "./services/ScriptHandler";
+import { injectColtScript } from "./services/ScriptHandler";
 
 import styles from './styles.css';
 
 const Colt = () => {
   useEffect(() => {
-    injectTrustVoxScripts();
+    injectColtScript();
   }, [])
 
   return (
