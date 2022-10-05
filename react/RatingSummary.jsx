@@ -25,8 +25,6 @@ const RatingSummary = () => {
     })
 
     injectTrustVoxScripts();
-
-    if (window._trustvox_initializer) window._trustvox_initializer.initialize();
   }, [product.productId]);
 
   return (

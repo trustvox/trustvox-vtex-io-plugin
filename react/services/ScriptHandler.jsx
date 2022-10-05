@@ -1,4 +1,14 @@
 export const setProduct = ({ productId, productName, imageUrl, productReference, sellers, gtin = null, ean = null, department_id = null }) => {
+
+  if (window._trustvox &&
+    window._trustvox.find(i => i[0] === '_productId') &&
+    window._trustvox.find(i => i[0] === '_productId')[1] &&
+    window._trustvox.find(i => i[0] === '_productId')[1] === productId) {
+    return null
+  }
+
+  if (window._trustvox_initializer) window._trustvox_initializer.cleanup();
+
   window._trustvox = [];
   window._trustvox.push(['_storeId', window.appsetting_trustvox_storeId]);
   window._trustvox.push(['_productId', productId]);
@@ -19,6 +29,8 @@ export const setProduct = ({ productId, productName, imageUrl, productReference,
 
   if (ean)
     _trustvox.push(['_productEans', ["ean", ean]]);
+
+  if (window._trustvox_initializer) window._trustvox_initializer.initialize();
 }
 
 export const injectTrustVoxScripts = () => {
