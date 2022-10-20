@@ -33,6 +33,13 @@ export const setProduct = ({ productId, productName, imageUrl, productReference,
   if (window._trustvox_initializer) window._trustvox_initializer.initialize();
 }
 
+export const cleanUpScript = () => {
+  const rateContainer = document.querySelector('.ts-shelf-container');
+  if(rateContainer){
+    rateContainer.remove();
+  }
+}
+
 export const injectMainScript = () => {
   // Main script
   if (!document.querySelector('#trustvox_script_main')) {
@@ -48,6 +55,7 @@ export const injectMainScript = () => {
 }
 
 export const injectWidgetScripts = () => {
+  cleanUpScript();
   injectMainScript();
 
   // All scripts
