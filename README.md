@@ -68,6 +68,8 @@ Obs: Se você for um parceiro VTEX, este processo levará aproximadamente 30 min
 
 1. No admin da sua conta VTEX, abra a seção **App** e selecione a caixa RA Trustvox:
 
+⚠️ Lembre de tirar a seleção de staging.
+
 ![RA TRUSTVOX App](/docs/assets/app-settings.png)
 
 | Nome da Propriedade      | Modelo     | Descrição                                          | Padrão |
