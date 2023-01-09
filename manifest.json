@@ -37,7 +37,7 @@
         "type": "boolean",
         "access": "public",
         "title": "Use staging scripts",
-        "default": true
+        "default": false
       }
     }
   },
