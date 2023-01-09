@@ -68,7 +68,7 @@ Obs: Se você for um parceiro VTEX, este processo levará aproximadamente 30 min
 
 1. No admin da sua conta VTEX, abra a seção **App** e selecione a caixa RA Trustvox:
 
-⚠️ Lembre de tirar a seleção de staging.
+⚠️ Caso seja necessário a validação no ambiente de homologação é necessário ativar a opção de staging e informar o ID de staging.
 
 ![RA TRUSTVOX App](/docs/assets/app-settings.png)
 
