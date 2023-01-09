@@ -16,6 +16,7 @@ To use the RA Trustvox components add the [product reviews](https://github.com/v
 1. First of all, you need clone this repo;
 
 2. Now, open the source code in the text editor and open the `manifest.json` file;
+
 ![Manifest JSON app](/docs/assets/tree_manifest.json.png)
 
 3. In this file, you need to change the `vendor` value. This value, is exactly the name of the vtex account that you need to install the app. The account name is present in the myvtex URL
@@ -59,6 +60,9 @@ Obs: If you are a VTEX partner, this process will take 30 minutes approximately.
 ## Configuration
 
 1. In your VTEX account's admin, open the **App** section and select the RA Trustvox box;
+
+⚠️ If validation is required in the approval environment, it is necessary to activate the staging option and inform the staging ID.
+
 ![RA TRUSTVOX App](/docs/assets/app-settings.png)
 
 | Prop name      | Type     | Description                                          | Default |
