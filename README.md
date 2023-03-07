@@ -62,7 +62,8 @@ Obs: Se você for um parceiro VTEX, este processo levará aproximadamente 30 min
 
 6. Para publicar efetivamente o aplicativo, vá para a pasta do projeto em sua linha de comando e execute: `vtex publish`
 
-5. Agora, instale o aplicativo usando o comando `vtex install`
+7. Agora, instale o aplicativo usando o comando `vtex install`
+8. Rode o comando `vtex deploy` para disponibilizar essa versão para uso
 
 ## Configuração
 

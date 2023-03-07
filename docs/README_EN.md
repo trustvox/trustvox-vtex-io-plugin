@@ -53,9 +53,10 @@ Obs: If you are a VTEX partner, this process will take 30 minutes approximately.
 
 5. After the vtex approval your request in the previous step, you will be able to publish the app. In a terminal, log in the store that you need to install the app. Run in the command line: `vtex login {account}`. Replace the `{account}`.
 
-5. To effective publish the app, go to the project folder in your command line and run: `vtex publish`
+6. To effective publish the app, go to the project folder in your command line and run: `vtex publish`
 
-5. Now, install the app using the `vtex install` command
+7. Now, install the app using the `vtex install` command
+8. Run the `vtex deploy` command to make this version available for use
 
 ## Configuration
 
