@@ -37,7 +37,7 @@ const RatingSummary = () => {
           className="trustvox-shelf-container"
           data-trustvox-product-code-js={productId}
           data-trustvox-should-skip-filter="true"
-          data-trustvox-display-rate-schema="true"
+          data-trustvox-display-rate-schema="false"
         />
         <span className="rating-click-here">
           <FormattedMessage
