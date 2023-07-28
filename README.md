@@ -35,35 +35,12 @@ git clone https://github.com/trustvox/trustvox-vtex-io-plugin.git
   }
 ```
 
-4. Você precisa solicitar a aprovação da equipe da VTEX para publicar este aplicativo. Então acesse [este link](https://forms.gle/f7bYdTA7tfdfB5tt7) e preencha os campos de acordo com a sua conta.
+4. Em um terminal, faça login na loja que você precisa para instalar o aplicativo. Execute na linha de comando: `vtex login {account}`. Substitua o `{account}`.
 
-```
-Obs: Se você for um parceiro VTEX, este processo levará aproximadamente 30 minutos. Caso contrário, pode levar até 3 dias para a vtex aprovar sua solicitação.
-```
+5. Para publicar efetivamente o aplicativo, vá para a pasta do projeto em sua linha de comando e execute: `vtex publish`
 
-* O nome do aplicativo é: `trustvox`
-
-* O nome da conta você altera no arquivo `manifest.json`
-
-* a caixa de seleção dos builders, marque os seguintes builders:
-
-[x] - react
-[x] - styles
-[x] - messages
-[x] - store
-[x] - pixel
-[x] - docs
-
-* no aplicativo principal, preencha `0`
-
-
-5. Após a vtex aprovar sua solicitação na etapa anterior, você poderá publicar o aplicativo. Em um terminal, faça login na loja que você precisa para instalar o aplicativo. Execute na linha de comando: `vtex login {account}`. Substitua o `{account}`.
-
-
-6. Para publicar efetivamente o aplicativo, vá para a pasta do projeto em sua linha de comando e execute: `vtex publish`
-
-7. Agora, instale o aplicativo usando o comando `vtex install`
-8. Rode o comando `vtex deploy` para disponibilizar essa versão para uso
+6. Agora, instale o aplicativo usando o comando `vtex install`
+7. Rode o comando `vtex deploy` para disponibilizar essa versão para uso
 
 ## Configuração
 
