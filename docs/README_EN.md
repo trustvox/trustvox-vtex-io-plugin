@@ -1,103 +1,130 @@
-# RA Trustvox
+<h1>
+  <img src="./assets/logo-ra-trustvox.png" alt="RA Trustvox" />
+</h1>
+
+The Trustvox VTEX IO plugin is an integration solution between the VTEX IO e-commerce platform and the RA Trustvox review platform. It allows merchants to display product review widgets and the trust seal directly on their pages, enriching the user experience and increasing store credibility.
 
 ![RA TRUSTVOX](https://ra-trustvox.intercom-attachments-1.com/i/o/386735661/6c801ddb284eaec619f98d66/file-u9QW9ZFVbA.png)
 
-## Description
+## Plugin Installation
 
-This is a Trustvox first party integration app that is responsible for showing the components related to Trustvox Reviews in your store.
+To install the Trustvox plugin for VTEX IO, follow these steps:
 
-## Usage
+### Prerequisites
 
-To use the RA Trustvox components add the [product reviews](https://github.com/vtex-apps/product-review-interfaces/tree/master/example
-) blocks into your theme as you would with any other block.
+- [Node JS](https://nodejs.org/en/download)
+- [VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install)
 
-## Publish the App
+### Installation
 
-1. First of all, you need clone this repo;
+1. To clone the project, run the following command:
 
-2. Now, open the source code in the text editor and open the `manifest.json` file;
+```
+git clone https://github.com/trustvox/trustvox-vtex-io-plugin.git
+```
 
-![Manifest JSON app](/docs/assets/tree_manifest.json.png)
+2. In the [manifest.json](../manifest.json) file, change the value of `vendor` to the name of the VTEX account that is performing the installation.
 
-3. In this file, you need to change the `vendor` value. This value, is exactly the name of the vtex account that you need to install the app. The account name is present in the myvtex URL
-Example: `https://{account}.myvtex.com`
+NOTE: The account name is present in the myvtex URL, Example: https://{account}.myvtex.com
+
+3. Open the terminal in this project's folder, and follow these steps:
+
+- Execute the following command to log in to the VTEX account:
+   
+```
+vtex login {account}
+```
+
+Replace `{account}`
+
+- Execute the following command to publish the app in the VTEX app repository:
+
+```
+vtex publish
+```
+
+- Execute the following command to install the app:
+
+```
+vtex install
+```
+
+After this, you should be able to find the RA Trustvox app in the `App Management` section in your VTEX dashboard.
+
+![App Management](./assets/app-management.png)
+
+4. Now it's necessary to configure the RA Trustvox app in the VTEX administrative panel. For this, follow these steps:
+
+- In the `App Management` section of the VTEX dashboard, select the RA Trustvox app, you should see the following screen:
+
+![RA Trustvox Configuration](./assets/config-ra-trustvox-vtex-io.png)
+
+- Fill in the `Store ID` field with your **store ID**. You can find your ID in the preferences menu in the [Trustvox Admin Panel](https://app.trustvox.com.br/auth/login), on the company page:
+
+![RA TRUSTVOX Preferences page](./assets/install-preferences-page.png)
+
+### ⚠️ If validation in the homologation environment is necessary, it is required to activate the `Enable test environment` option and provide the store ID of the Trustvox test environment.
+
+5. After installation, go to your store's project (store-theme) and edit the `manifest.json` file, in the project dependencies add the Trustvox app dependency.
+
 ```json
-  {
+{
+  ...
+   "dependencies": {
     ...
-    "name": "trustvox",
-    "vendor": "{account}",
+    "{account}.trustvox": "0.x",
     ...
-  }
+   } 
+  ...
+}
 ```
 
-4. Do you need to request to VTEX team approval you to publish this app. So access [this link](https://forms.gle/f7bYdTA7tfdfB5tt7) and fill the fields accordingly with your account.
+Replace {account} with your VTEX account.
 
-```
-Obs: If you are a VTEX partner, this process will take 30 minutes approximately. If not, can take 3 days to the vtex appoval your request
-```
+Upload the changes to your store, after this, you will be able to add the RA Trustvox app blocks.
 
-* The app name is: `trustvox`
-* The account name is that you change in the `manifest.json` file
+## Block Configuration
 
-* In the builders checkbox, check the follow builders:
+This app provides replacements for the [Product Reviews](https://github.com/vtex-apps/product-review-interfaces/tree/master/example) blocks and also provides other blocks.
 
-[x] - react
-[x] - styles
-[x] - messages
-[x] - store
-[x] - pixel
-[x] - docs
+After installation, you can add the following blocks to your pages:
 
-* in the app major, fill `0`
+### block: product-rating-inline
 
+This block can be added to product shelves. It renders the widget that lists the average star ratings and the number of comments for the product being viewed.
 
-5. After the vtex approval your request in the previous step, you will be able to publish the app. In a terminal, log in the store that you need to install the app. Run in the command line: `vtex login {account}`. Replace the `{account}`.
+![product-rating-inline block](./assets/product-rating-inline.png)
 
-6. To effective publish the app, go to the project folder in your command line and run: `vtex publish`
+### block: product-rating-summary
 
-7. Now, install the app using the `vtex install` command
-8. Run the `vtex deploy` command to make this version available for use
+This block can be added to the product page (`store.product`). It renders the widget that lists the average star ratings and the number of comments for the product being viewed.
 
-## Configuration
+![product-rating-summary block](./assets/product-rating-summary.png)
 
-1. In your VTEX account's admin, open the **App** section and select the RA Trustvox box;
+### block: product-reviews
 
-⚠️ If validation is required in the approval environment, it is necessary to activate the staging option and inform the staging ID.
+This block can be added to the product page (`store.product`) and renders the main widget that lists any comments or answered questions for the product being viewed, as well as a form to make a new question, if the product does not have the question or review, it will be displayed as seen in the store.
 
-![RA TRUSTVOX App](/docs/assets/app-settings.png)
+![product-reviews block](./assets/product-reviews.png)
 
-| Prop name      | Type     | Description                                          | Default |
-| - | - | - | - |
-| `Store ID` | `string` | the id from RA Trustvox | |
-| `Quantity of reviews on colt` | `number` | the number of reviews that cold will have | `7`
+### block: certificate-ratrustvox
 
-2. Fill in your **Store ID**. You can find your ID at the [Trustvox preferences](https://app.trustvox.com.br/auth/login), in Company page;
-![RA TRUSTVOX Preferences page](/docs/assets/install-preferences-page.png)
+This block renders the True Reviews certificate widget, you can see more about [here](https://help.trustvox.com.br/pt-BR/articles/5551970-como-adicionar-e-exibir-o-selo-de-reviews-verdadeiros-no-seu-site).
 
+![certificate-ratrustvox block](./assets/certificate-ratrustvox.png)
 
+### bloco: colt-ratrustvox
 
-## Blocks
+This block renders the Opinions Carousel widget, you can see more about [here](https://help.trustvox.com.br/pt-BR/articles/5557670-como-adicionar-as-opinioes-de-loja-carrossel-da-ra-trustvox-em-seu-site).
 
-⚠️ This app fills the standard VTEX review blocks with content using abstract interfaces from `vtex.product-review-interfaces`. The **VTEX review blocks** are:
+![colt-ratrustvox block](./assets/colt-ratrustvox.png)
 
-| Block | Description | Preview |
-| - | - | - |
-| `product-rating-inline` | This block can be added in product shelves. It renders the widget that lists the average rating stars and amount of reviews for the product being viewed. | ![product-rating-inline block](/docs/assets/product-rating-inline.png) |
-| `product-rating-summary` | This block can be added to the product page (`store.product`). It renders the widget that lists the average rating stars and amount of reviews for the product being viewed. | ![product-rating-inline block](/docs/assets/product-rating-summary.png) |
-| `product-reviews` | This block can be added to the product page (`store.product`) and renders the main widget which lists any reviews or answered questions for the product being viewed as well as a form to ask a new question, ff the product did not have the question or review, it will be displayed as seen from the store. | ![product-rating-inline block](/docs/assets/product-reviews.png) |
-
-This app also adds two new blocks:
-
-| Block | Description | Preview |
-| - | - | - |
-| `certificate-ratrustvox` | This block renders the *Reviews Verdadeiros* certificate widget, you can se more on [this page](https://help.trustvox.com.br/pt-BR/articles/5551970-como-adicionar-e-exibir-o-selo-de-reviews-verdadeiros-no-seu-site). | ![certificate-ratrustvox block](/docs/assets/certificate-ratrustvox.png) |
-| `colt-ratrustvox` | This block renders the *Carrossel de opiniões* widget, you can se more on [this page](https://help.trustvox.com.br/pt-BR/articles/5557670-como-adicionar-as-opinioes-de-loja-carrossel-da-ra-trustvox-em-seu-site). | ![colt-ratrustvox block](/docs/assets/colt-ratrustvox.png) |
-
-### Styles API
+## Style API
 
 This app provides some CSS classes as an API for style customization.
 
-To use this CSS API, you must add the `styles` builder and create an app styling CSS file and add `{account}.trustvox` to your theme `dependencies`.
+To use this CSS API, you must add the styles builder and create an app style CSS file and add `{account}.trustvox` to your theme `dependencies`.
+
 
 1. Add the `styles` builder to your `manifest.json`:
 
@@ -115,10 +142,26 @@ To use this CSS API, you must add the `styles` builder and create an app styling
   }
 ```
 
-3. Create a file called `{account}.trustvox.css` inside the `styles/css` folder. Add your custom styles:
+3. Create a file named `{account}.trustvox.css` inside the `styles/css` folder. Add your custom styles:
 
 ```css
 .container {
   margin-top: 10px;
 }
 ```
+
+## Production Deployment
+
+After conducting integration tests with the RA Trustvox platform, open the terminal in this project's folder and execute the following command to make the Trustvox app available for use in production:
+
+```
+vtex deploy
+```
+
+## Useful Links
+
+[Requirements and First Steps - VTEX Platform / VTEX IO](https://help.trustvox.com.br/pt-BR/articles/5551917-requisitos-e-primeiros-passos-plataforma-vtex-vtex-io)
+
+[Required Access for Integration on the VTEX Platform](https://help.trustvox.com.br/pt-BR/articles/5560780-acessos-necessarios-para-integracao-na-plataforma-vtex)
+
+[How to Display RA Trustvox Opinions on the VTEX IO Platform](https://help.trustvox.com.br/pt-BR/articles/6726517-como-exibir-as-opinioes-da-ra-trustvox-na-plataforma-vtex-io)
