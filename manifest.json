@@ -25,19 +25,21 @@
       "storeId": {
         "type": "string",
         "access": "public",
-        "title": "Store ID"
+        "title": "Store ID",
+        "description": "ID da loja no disponibilizado no painel da Trustvox"
       },
       "colt": {
         "type": "number",
         "access": "public",
-        "title": "Quantity of reviews on colt",
+        "title": "Quantidade de avaliações que devem aparecer no widget de carrossel de loja",
         "default": 7
       },
       "staging": {
         "type": "boolean",
         "access": "public",
-        "title": "Use staging scripts",
-        "default": false
+        "title": "Habilitar ambiente de testes",
+        "default": false,
+        "description": "Ao habilitar o ambiente de testes o store id deve ser substituído por um store id de uma loja do ambiente de testes da Trustvox"
       }
     }
   },
