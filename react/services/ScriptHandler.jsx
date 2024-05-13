@@ -1,4 +1,4 @@
-export const setProduct = ({ productId, productName, imageUrl, productReference, sellers, gtin = null, ean = null, department_id = null }) => {
+export const setProduct = ({ productId, productName, imageUrl, productReference, sellers, gtin = null, ean = null, department_id = null, productGroup }) => {
 
   if (window._trustvox &&
     window._trustvox.find(i => i[0] === '_productId') &&
@@ -29,6 +29,9 @@ export const setProduct = ({ productId, productName, imageUrl, productReference,
 
   if (ean)
     _trustvox.push(['_productEans', ["ean", ean]]);
+
+  if (productGroup && Boolean(window.appsetting_trustvox_enableProductGroup))
+    _trustvox.push(['_productGroup', productGroup]);
 
   if (window._trustvox_initializer) window._trustvox_initializer.initialize();
 }

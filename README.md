@@ -85,6 +85,16 @@ Substitua o `{account}` pela sua conta vtex.
 
 Suba as alterações para sua loja, após isso, você irá conseguir adicionar os blocos do aplicativo RA Trustvox.
 
+## Ativar agrupamento de produto
+
+- Localize e selecione o aplicativo RA Trustvox. A tela de configuração do aplicativo será exibida como mostrado abaixo:
+
+![product-rating-inline block](/docs/assets/product-group.png)
+
+- Marque a caixa de seleção Habilitar Espelhamento de Reviews para ativar o agrupamento de produtos.
+
+- Clique no botão Salvar para aplicar as alterações.
+
 ## Configuração dos blocos
 
 Este aplicativo disponibiliza substitui os blocos de [Reviews de produto](https://github.com/vtex-apps/product-review-interfaces/tree/master/example) e também disponibiliza outros blocos.

@@ -6,6 +6,7 @@ import styles from './styles.css'
 
 const Reviews = () => {
   const { product } = useContext(ProductContext)
+  console.log("product no reviews ----->",product)
 
   if (!product) {
     return null
@@ -14,6 +15,8 @@ const Reviews = () => {
   const { productName, productId, items, productReference } = product
 
   useEffect(() => {
+    const productGroup = product.properties.find(prop => prop.name === 'product-group')?.values[0]
+
     setProduct({
       productId,
       productName,
@@ -22,7 +25,8 @@ const Reviews = () => {
       sellers: null,
       gtin: null,
       ean: null,
-      department_id: null
+      department_id: null,
+      productGroup
     });
 
     injectWidgetScripts();

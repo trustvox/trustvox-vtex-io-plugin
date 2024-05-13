@@ -1,6 +1,6 @@
 {
   "name": "trustvox",
-  "vendor": "{account}",
+  "vendor": "codebluepartnerbr",
   "version": "0.0.1",
   "title": "RA Trustvox",
   "description": "Integrates with RA Trustvox",
@@ -40,6 +40,12 @@
         "title": "Habilitar ambiente de testes",
         "default": false,
         "description": "Ao habilitar o ambiente de testes o store id deve ser substituído por um store id de uma loja do ambiente de testes da Trustvox"
+      },
+      "enableProductGroup": {
+        "type": "boolean",
+        "access": "public",
+        "title": "Habilitar espelhamento de Reviews",
+        "default": false
       }
     }
   },
