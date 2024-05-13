@@ -6,7 +6,6 @@ import styles from './styles.css'
 
 const Reviews = () => {
   const { product } = useContext(ProductContext)
-  console.log("product no reviews ----->",product)
 
   if (!product) {
     return null
