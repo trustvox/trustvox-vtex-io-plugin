@@ -83,6 +83,16 @@ Replace {account} with your VTEX account.
 
 Upload the changes to your store, after this, you will be able to add the RA Trustvox app blocks.
 
+## Enable product grouping
+
+- Find and select the Trustvox RA app. The application configuration screen will be displayed as shown below:
+
+![Product group](/docs/assets/product-group.png)
+
+- Select the Enable Review Mirroring checkbox to enable product grouping.
+
+- Click the Save button to apply the changes.
+
 ## Block Configuration
 
 This app provides replacements for the [Product Reviews](https://github.com/vtex-apps/product-review-interfaces/tree/master/example) blocks and also provides other blocks.

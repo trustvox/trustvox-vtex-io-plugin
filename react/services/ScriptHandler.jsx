@@ -18,9 +18,6 @@ export const setProduct = ({ productId, productName, imageUrl, productReference,
   if (sellers)
     window._trustvox.push(['_sellers', sellers])
 
-  if (productReference && productReference.length)
-    window._trustvox.push(['_productGroup', productReference])
-
   if (department_id)
     window._trustvox.push(['_productExtraAttributes', { "department_id": department_id }]);
 

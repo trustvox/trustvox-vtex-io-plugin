@@ -89,7 +89,7 @@ Suba as alterações para sua loja, após isso, você irá conseguir adicionar o
 
 - Localize e selecione o aplicativo RA Trustvox. A tela de configuração do aplicativo será exibida como mostrado abaixo:
 
-![product-rating-inline block](/docs/assets/product-group.png)
+![Product group](/docs/assets/product-group.png)
 
 - Marque a caixa de seleção Habilitar Espelhamento de Reviews para ativar o agrupamento de produtos.
 
