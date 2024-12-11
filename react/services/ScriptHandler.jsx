@@ -3,7 +3,7 @@ export const setProduct = ({ productId, productName, imageUrl, productReference,
   if (window._trustvox &&
     window._trustvox.find(i => i[0] === '_productId') &&
     window._trustvox.find(i => i[0] === '_productId')[1] &&
-    window._trustvox.find(i => i[0] === '_productId')[1] === productId) {
+    window._trustvox.find(i => i[0] === '_productId')[1] === String(productId)) {
     return null
   }
 
