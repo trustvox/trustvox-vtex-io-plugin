@@ -1,14 +1,14 @@
 <h1>
-  <img src="./assets/logo-ra-trustvox.png" alt="RA Trustvox" />
+  <img src="./assets/RA-Review-Color.svg" alt="RA Reviews" width="200" />
 </h1>
 
-The Trustvox VTEX IO plugin is an integration solution between the VTEX IO e-commerce platform and the RA Trustvox review platform. It allows merchants to display product review widgets and the trust seal directly on their pages, enriching the user experience and increasing store credibility.
+The RA Reviews VTEX IO plugin is an integration solution between the VTEX IO e-commerce platform and the RA Reviews review platform. It allows merchants to display product review widgets and the trust seal directly on their pages, enriching the user experience and increasing store credibility.
 
-![RA TRUSTVOX](https://ra-trustvox.intercom-attachments-1.com/i/o/386735661/6c801ddb284eaec619f98d66/file-u9QW9ZFVbA.png)
+![RA Reviews](./assets/sincero.png)
 
 ## Plugin Installation
 
-To install the Trustvox plugin for VTEX IO, follow these steps:
+To install the RA Reviews plugin for VTEX IO, follow these steps:
 
 ### Prerequisites
 
@@ -49,23 +49,23 @@ vtex publish
 vtex install
 ```
 
-After this, you should be able to find the RA Trustvox app in the `App Management` section in your VTEX dashboard.
+After this, you should be able to find the RA Reviews app in the `App Management` section in your VTEX dashboard.
 
 ![App Management](./assets/app-management.png)
 
-4. Now it's necessary to configure the RA Trustvox app in the VTEX administrative panel. For this, follow these steps:
+4. Now it's necessary to configure the RA Reviews app in the VTEX administrative panel. For this, follow these steps:
 
-- In the `App Management` section of the VTEX dashboard, select the RA Trustvox app, you should see the following screen:
+- In the `App Management` section of the VTEX dashboard, select the RA Reviews app, you should see the following screen:
 
-![RA Trustvox Configuration](./assets/config-ra-trustvox-vtex-io.png)
+![RA Reviews Configuration](./assets/config-ra-trustvox-vtex-io.png)
 
-- Fill in the `Store ID` field with your **store ID**. You can find your ID in the preferences menu in the [Trustvox Admin Panel](https://app.trustvox.com.br/auth/login), on the company page:
+- Fill in the `Store ID` field with your **store ID**. You can find your ID in the preferences menu in the [RA Reviews Admin Panel](https://app.trustvox.com.br/auth/login), on the company page:
 
-![RA TRUSTVOX Preferences page](./assets/install-preferences-page.png)
+![RA Reviews Preferences page](./assets/install-preferences-page.png)
 
-### ⚠️ If validation in the homologation environment is necessary, it is required to activate the `Enable test environment` option and provide the store ID of the Trustvox test environment.
+### ⚠️ If validation in the homologation environment is necessary, it is required to activate the `Enable test environment` option and provide the store ID of the RA Reviews test environment.
 
-5. After installation, go to your store's project (store-theme) and edit the `manifest.json` file, in the project dependencies add the Trustvox app dependency.
+5. After installation, go to your store's project (store-theme) and edit the `manifest.json` file, in the project dependencies add the RA Reviews app dependency.
 
 ```json
 {
@@ -81,13 +81,13 @@ After this, you should be able to find the RA Trustvox app in the `App Managemen
 
 Replace {account} with your VTEX account.
 
-Upload the changes to your store, after this, you will be able to add the RA Trustvox app blocks.
+Upload the changes to your store, after this, you will be able to add the RA Reviews app blocks.
 
 ## Enable product grouping
 
-- Find and select the Trustvox RA app. The application configuration screen will be displayed as shown below:
+- Find and select the RA Reviews app. The application configuration screen will be displayed as shown below:
 
-![Product group](/docs/assets/product-group.png)
+![Product group](./assets/product-group.png)
 
 - Select the Enable Review Mirroring checkbox to enable product grouping.
 
@@ -119,13 +119,13 @@ This block can be added to the product page (`store.product`) and renders the ma
 
 ### block: certificate-ratrustvox
 
-This block renders the True Reviews certificate widget, you can see more about [here](https://help.trustvox.com.br/pt-BR/articles/5551970-como-adicionar-e-exibir-o-selo-de-reviews-verdadeiros-no-seu-site).
+This block renders the True Reviews certificate widget, you can see more about [here](https://faleconosco.reclameaqui.com.br/s/article/Como-adicionar-e-exibir-o-Selo-de-Avalia%C3%A7%C3%B5es-Confi%C3%A1veis-do-Reclame-AQUI-no-seu-site?language=pt_BR).
 
 ![certificate-ratrustvox block](./assets/certificate-ratrustvox.png)
 
-### bloco: colt-ratrustvox
+### block: colt-ratrustvox
 
-This block renders the Opinions Carousel widget, you can see more about [here](https://help.trustvox.com.br/pt-BR/articles/5557670-como-adicionar-as-opinioes-de-loja-carrossel-da-ra-trustvox-em-seu-site).
+This block renders the Opinions Carousel widget, you can see more about [here](https://faleconosco.reclameaqui.com.br/s/article/Como-adicionar-as-opini%C3%B5es-de-loja-carrossel-da-RA-Reviews-em-seu-site?language=pt_BR).
 
 ![colt-ratrustvox block](./assets/colt-ratrustvox.png)
 
@@ -170,8 +170,8 @@ vtex deploy
 
 ## Useful Links
 
-[Requirements and First Steps - VTEX Platform / VTEX IO](https://help.trustvox.com.br/pt-BR/articles/5551917-requisitos-e-primeiros-passos-plataforma-vtex-vtex-io)
+[Requirements and First Steps - VTEX Platform / VTEX IO](https://faleconosco.reclameaqui.com.br/s/article/Requisitos-e-primeiros-passos-Plataforma-VTEX-VTEX-IO?language=pt_BR)
 
-[Required Access for Integration on the VTEX Platform](https://help.trustvox.com.br/pt-BR/articles/5560780-acessos-necessarios-para-integracao-na-plataforma-vtex)
+[Required Access for Integration on the VTEX Platform](https://faleconosco.reclameaqui.com.br/s/article/Acessos-necess%C3%A1rios-para-integra%C3%A7%C3%A3o-na-plataforma-VTEX?language=pt_BR)
 
-[How to Display RA Trustvox Opinions on the VTEX IO Platform](https://help.trustvox.com.br/pt-BR/articles/6726517-como-exibir-as-opinioes-da-ra-trustvox-na-plataforma-vtex-io)
+[How to Display RA Trustvox Opinions on the VTEX IO Platform](https://faleconosco.reclameaqui.com.br/s/article/Como-exibir-as-opini%C3%B5es-da-RA-Reviews-na-plataforma-VTEX-IO?language=pt_BR)
