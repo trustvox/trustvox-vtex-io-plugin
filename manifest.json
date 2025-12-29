@@ -1,9 +1,9 @@
 {
-  "name": "trustvox",
+  "name": "ra-reviews",
   "vendor": "{account}",
   "version": "0.0.1",
-  "title": "RA Trustvox",
-  "description": "Integrates with RA Trustvox",
+  "title": "RA Reviews",
+  "description": "Integrates with RA Reviews",
   "builders": {
     "react": "3.x",
     "styles": "2.x",
@@ -19,14 +19,14 @@
     "vtex.pixel-interfaces": "1.x"
   },
   "settingsSchema": {
-    "title": "RA Trustvox",
+    "title": "RA Reviews",
     "type": "object",
     "properties": {
       "storeId": {
         "type": "string",
         "access": "public",
         "title": "Store ID",
-        "description": "ID da loja no disponibilizado no painel da Trustvox"
+        "description": "ID da loja no disponibilizado no painel da RA Reviews"
       },
       "colt": {
         "type": "number",
@@ -39,7 +39,7 @@
         "access": "public",
         "title": "Habilitar ambiente de testes",
         "default": false,
-        "description": "Ao habilitar o ambiente de testes o store id deve ser substituído por um store id de uma loja do ambiente de testes da Trustvox"
+        "description": "Ao habilitar o ambiente de testes o store id deve ser substituído por um store id de uma loja do ambiente de testes da RA Reviews"
       },
       "enableProductGroup": {
         "type": "boolean",
